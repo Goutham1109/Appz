@@ -1,1 +1,65 @@
-<p>contact-manager works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p class="h3">Contact App
+        <button class="btn btn-success" [routerLink]="['/contacts/add']"> <i class="fa fa-plus-circle"></i> Add
+          contact</button>
+      </p>
+      <p class="fst-italic">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It
+        has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <div class="col-md-6">
+            <input type="Submit" class="btn btn-primary">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- card design -->
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card list-group-item-success">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="contact-img"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQRWZnPpqVBkbKmQI46uq-wWOW05E57t6vhw&usqp=CAU"
+                alt="user">
+            </div>
+            <div class="col-sm-6">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Name: <span class="fw-bold">gg</span>
+                </li>
+                <li class="list-group-item">
+                  Email: <span class="fw-bold">gg@gmail.com</span>
+                </li>
+                <li class="list-group-item">
+                  Mobile: <span class="fw-bold">123456789</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-2">
+              <a routerLink="/contacts/view/:id" class="btn btn-warning my-1"><i class="fa fa-eye"></i></a>
+              <a routerLink="/contacts/edit/:id" class="btn btn-success my-1"><i class="fa fa-edit"></i></a>
+              <button routerLink="/contacts/view/:id" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

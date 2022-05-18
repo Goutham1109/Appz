@@ -10,6 +10,8 @@ import { AddContactComponent } from './contacts/add-contact/add-contact.componen
 import { ViewContactComponent } from './contacts/view-contact/view-contact.component';
 import { EditContactComponent } from './contacts/edit-contact/edit-contact.component';
 import { SpinnerComponent } from './contacts/spinner/spinner.component';
+import { PgNotFoundComponent } from './contacts/pg-not-found/pg-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SpinnerComponent } from './contacts/spinner/spinner.component';
     AddContactComponent,
     ViewContactComponent,
     EditContactComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    PgNotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

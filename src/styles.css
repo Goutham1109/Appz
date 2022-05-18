@@ -4,3 +4,8 @@
 body {
     font-family: 'Fredoka',sans-serif;
 }
+
+.contact-img {
+    width:150px;
+    border-radius:50%;
+}
