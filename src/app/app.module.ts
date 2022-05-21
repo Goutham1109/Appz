@@ -12,7 +12,8 @@ import { EditContactComponent } from './contacts/edit-contact/edit-contact.compo
 import { SpinnerComponent } from './contacts/spinner/spinner.component';
 import { PgNotFoundComponent } from './contacts/pg-not-found/pg-not-found.component';
 import { HomeComponent } from './home/home.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,8 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     AlertModule.forRoot()
   ],
   providers: [],

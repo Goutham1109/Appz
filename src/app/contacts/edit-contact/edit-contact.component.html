@@ -22,27 +22,31 @@
     <div class="col-sm-4">
       <form>
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="Name" name="" id="">
+          <input type="text" class="form-control" placeholder="Name" [(ngModel)]="contactData.name" name="name" id="">
         </div>
         <div class="mb-2">
-          <input type="number" class="form-control" placeholder="Mobile Number" name="" id="">
+          <input type="number" class="form-control" placeholder="Mobile Number" [(ngModel)]="contactData.mobile"
+            name="mobile" id="">
         </div>
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="Company" name="" id="">
+          <input type="text" class="form-control" placeholder="Company" [(ngModel)]="contactData.company" name="company"
+            id="">
         </div>
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="Title" name="" id="">
+          <input type="text" class="form-control" placeholder="Title" [(ngModel)]="contactData.title" name="title"
+            id="">
         </div>
         <div class="mb-2">
-          <input type="email" class="form-control" placeholder="email" name="" id="">
+          <input type="email" class="form-control" placeholder="email" [(ngModel)]="contactData.email" name="email"
+            id="">
         </div>
         <div class="mb-2">
-          <select name="" class="form-control" id="">
-            <option value="">Select Group</option>
+          <select name="groupId" class="form-control" id="" [(ngModel)]="contactData.groupId">
+            <option [value]="group.id" *ngFor="let group of grpDatas">{{group.name}}</option>
           </select>
         </div>
         <div class="mb-2">
-          <input type="submit" class="btn btn-success">
+          <input type="submit" (click)="update()" class="btn btn-success">
           <button class="btn btn-warning" routerLink="/">Cancel</button>
         </div>
       </form>

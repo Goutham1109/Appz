@@ -26,11 +26,25 @@
     </div>
   </div>
 </div>
+<div *ngIf="loading">
+  <div class="container center">
+    <app-spinner></app-spinner>
+  </div>
+</div>
 
+<div *ngIf="!loading && errMsg">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Something went wrong</h2>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- card design -->
-<div class="container mt-4">
+<div class="container mt-4" *ngIf="!loading">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6" *ngFor="let ct of contacts">
       <div class="card list-group-item-success">
         <div class="card-body">
           <div class="row">
@@ -42,20 +56,20 @@
             <div class="col-sm-6">
               <ul class="list-group">
                 <li class="list-group-item">
-                  Name: <span class="fw-bold">gg</span>
+                  Name: <span class="fw-bold">{{ct.name}}</span>
                 </li>
                 <li class="list-group-item">
-                  Email: <span class="fw-bold">gg@gmail.com</span>
+                  Email: <span class="fw-bold">{{ct.email}}</span>
                 </li>
                 <li class="list-group-item">
-                  Mobile: <span class="fw-bold">123456789</span>
+                  Mobile: <span class="fw-bold">{{ct.mobile}}</span>
                 </li>
               </ul>
             </div>
             <div class="col-sm-2">
-              <a routerLink="/contacts/view/:id" class="btn btn-warning my-1"><i class="fa fa-eye"></i></a>
-              <a routerLink="/contacts/edit/:id" class="btn btn-success my-1"><i class="fa fa-edit"></i></a>
-              <button routerLink="/contacts/view/:id" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+              <a routerLink="/contacts/view/{{ct.id}}" class="btn btn-warning my-1"><i class="fa fa-eye"></i></a>
+              <a routerLink="/contacts/edit/{{ct.id}}" class="btn btn-success my-1"><i class="fa fa-edit"></i></a>
+              <button (click)="delete(ct.id)" class="btn btn-danger"><i class="fa fa-trash"></i></button>
             </div>
           </div>
         </div>

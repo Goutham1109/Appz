@@ -1,0 +1,45 @@
+{
+  "contacts": [
+    {
+      "id": "tc1",
+      "name": "GT",
+      "company": "TCS",
+      "title": "MR",
+      "groupId": "1",
+      "mobile": "2233",
+      "email": "g@gmail.com"
+    },
+    {
+      "id": "tc2",
+      "name": "GT2",
+      "company": "TCS",
+      "title": "MR",
+      "groupId": "1",
+      "mobile": "2233",
+      "email": "g@gmail.com"
+    },
+    {
+      "name": "hhh",
+      "mobile": 1332,
+      "company": "hh",
+      "title": "hh",
+      "email": "ggh",
+      "groupId": "1",
+      "id": "u6AxkcZ"
+    }
+  ],
+  "group": [
+    {
+      "id": 1,
+      "name": "colleagues"
+    },
+    {
+      "id": 2,
+      "name": "Family"
+    },
+    {
+      "id": 3,
+      "name": "Friends"
+    }
+  ]
+}
